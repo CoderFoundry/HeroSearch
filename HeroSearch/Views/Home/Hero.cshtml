@@ -1,0 +1,62 @@
+﻿@model HeroSearch.MarvelApi.CharacterComicViewModel
+@{
+    ViewData["Title"] = "Hero";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Hero Title Card-->
+<div class="row  py-3">
+    <div class="col-md-4">
+        <img class="img-responsive rounded mb-lg-0 box box0 " src="@(String.Format("{0}.{1}", Model.Character.Thumbnail.Path, Model.Character.Thumbnail.Extension))" style="width:100%" alt="">
+    </div>
+    <!-- /.col-md-8 -->
+    <div class="col-md-8">
+        <div class="card box box0 h-100 mt-2 mt-lg-0 ">
+            <div class="card-title ml-3 mt-3">
+                <h1 class="ComicTitle ">@Model.Character.Name</h1>
+            </div>
+            <div class="card-body">
+                <p>@Model.Character.Description</p>
+            </div>
+            <div class="card-footer">
+                <a href="@Model.Character.Urls.FirstOrDefault(x=>x.Type=="detail").Url" class="comicbutton comicbutton-accent" target="_blank">Learn More!</a>
+                <p>@Model.AttributionText</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+<!--Call to Action-->
+<div class="row text-center">
+    <div class="col-md-12 box box4">
+        <p class="boxtext boxTextTop-left">Meanwhile...</p>
+        <div class="boxinner0 mt-4">
+            <H2>Learn how we made this at CoderFoundry.com</H2>
+        </div>
+    </div>
+</div>
+<!-- Content Row -->
+<div class="row py-3">
+    @foreach (var comic in Model.Comics)
+    {
+    <div class="col-md-4 mb-0 flip-container">
+        <div class="flipper" style="min-height:450px;">
+            <div class="front">
+                <img class="box" src="@(String.Format("{0}/portrait_uncanny.{1}", comic.Thumbnail.Path, comic.Thumbnail.Extension))" alt="">
+            </div>
+            <div class="card h-100 back box ">
+                <div class="card-body">
+                    <h5 class="card-title">@comic.Series.Name #@comic.IssueNumber</h5>
+                    <p class="card-text">@comic.Description</p>
+                </div>
+                <div class="card-footer float-right">
+                    <a href="#" class="comicbutton comicbutton-accent">More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    <!-- /.col-md-4 -->
+</div>

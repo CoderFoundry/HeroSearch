@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HeroSearch</title>
+
+    <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.css" />    
+    <link rel="stylesheet" href="~/css/heroic-features.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/lop6dey.css">
+
+</head>
+<body class="comicBGPanel greyBG">
+    <!-- Navigation -->
+    <div class="container-fluid SkyLine my-0">
+        <div class=" container align-content-center ">
+            <h4 class="big text-center">Hero Search</h4>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/Home">Hero Search</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <form class="form-inline ml-auto" asp-controller="Home" asp-action="Hero">
+                    <div class="md-form my-0">
+                        <input class="form-control typeahead" type="text" autocomplete="off" name="searchString" placeholder="Search" aria-label="Search">
+                    </div>
+                    <button href="#!" class="btn btn-dark btn-outline-light btn-md my-0 ml-sm-2" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Hero Search 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/bootstrap3-typeahead.min.js"></script>
+    
+
+    <script>
+        $.getJSON('../JsonData/HeroNames.json', function (heroNames) {
+            $('.typeahead').typeahead({ source: heroNames });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

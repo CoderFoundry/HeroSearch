@@ -1,0 +1,256 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+body {
+    /*background-image:url("/images/ComicBG2.jpg");
+  background-size:cover;*/
+}
+
+
+.HeroSpotlight {
+    background-image: url("/images/CaptainMarvel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #f2c94d;
+}
+
+.HeroSpotlightDesc {
+    background: #fff;
+    background: rgba(255,255,255,.3);
+    color: black;
+    width: 50%;
+}
+
+div.mobile {
+    background-color: #f2c94d;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-top: -25px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    div.desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Hide captions */
+    div.mobile {
+        display: none;
+    }
+}
+
+.big {
+    font-family: ccbiffbamboom, sans-serif;
+    color: black;
+    margin: 30px 0 -1em 0;
+    text-shadow: -1px -1px yellow, 1px 1px orange, 2px 2px orange;
+    -webkit-transform: rotate(-5deg) skew(-10deg, 0);
+    -moz-transform: rotate(-5deg) skew(-10deg, 0);
+    -ms-transform: rotate(-5deg) skew(-10deg, 0);
+    -o-transform: rotate(-5deg) skew(-10deg, 0);
+    transform: rotate(-5deg) skew(-10deg, 0);
+    padding-bottom: 0px;
+    float: left;
+    width: 100%;
+}
+
+h1.big {
+    font-size: 150px;
+}
+
+h2.big {
+    font-size: 110px;
+}
+
+h3.big {
+    font-size: 80px;
+}
+
+h4.big {
+    font-size: 60px;
+}
+
+
+.SkyLine {
+    background-image: url("/images/SkyLinefinal.png"),linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%);
+    background-size: contain,auto;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    min-height: 200px;
+}
+
+.ComicPanel {
+    background-color: #fff;
+    border: solid 3px #000;
+    box-shadow: 0 6px 6px -6px #000;
+}
+
+.ComicTitle {
+    font-family: ccbiffbamboom, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+}
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+.flip-container, .front, .back {
+    width: 320px;
+    height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+.comicBGPanel {
+    padding: 0px;
+    background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+    margin-bottom: -4px;
+}
+
+.blueBG {
+    background-image: radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, #ffffff 30%, #ffffff 40%, rgba(0, 0, 0, 0) 90%), radial-gradient(ellipse farthest-corner at 0px 0px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 8px 8px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 0px 8px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 40%), radial-gradient(ellipse farthest-corner at 8px 0px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), linear-gradient(40deg, #038ecf 0, #51cbf1 30%, #7ff9ff 50%, #51cbf1 70%, #038ecf 100%);
+}
+
+.greyBG {
+    background-image: radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, #ffffff 30%, #ffffff 40%, rgba(0, 0, 0, 0) 90%), radial-gradient(ellipse farthest-corner at 0px 0px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 8px 8px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 0px 8px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 40%), radial-gradient(ellipse farthest-corner at 8px 0px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), linear-gradient(40deg, #484848 0, #959595 30%, #acacac 50%, #959595 70%, #484848 100%);
+}
+
+/*comic styled boxes*/
+
+.box {
+    background: #fff;
+    border: solid black;
+    border-color: black;
+    float: left;
+}
+
+.boxtext {
+    background-color: lemonchiffon;
+    border: solid 2px #000;
+    border-left: 0px;
+    padding: 3px 10px;
+    font-weight: bold;
+}
+
+.boxTextTop-left {
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    transform: skew(-15deg);
+}
+
+
+.box0 {
+    border-width: 3px 4px 3px 5px;
+    width: 100%
+}
+
+.box1 {
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+}
+
+.box2 {
+    width: 350px;
+    border-width: 3px 3px 5px 5px;
+    border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+}
+
+.box3 {
+    border-width: 5px 3px 3px 5px;
+    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(2deg);
+}
+
+.box4 {
+    border-width: 3px 4px 3px 5px;
+    border-radius: 15px/45px;
+    width: 100%
+}
+
+.oddboxinner {
+    margin: 15px;
+    transform: rotate(-2deg);
+}
+
+.boxinner0 {
+    margin: 15px;
+}
+
+.evenboxinner {
+    transform: rotate(2deg);
+    margin: 15px;
+    padding: 0 5px;
+    float: right;
+    background: #ddd;
+    border: 1px solid #222;
+    box-shadow: 3px 3px 0 #222;
+}
+
+.comicbutton {
+    display: inline-block;
+    background-color: lemonchiffon;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1em;
+}
+
+.comicbutton-accent {
+    color: black;
+}
+
+    .comicbutton-accent:hover,
+    .comicbutton-accent:focus {
+        background: black;
+        color: #FDD135;
+    }
+
